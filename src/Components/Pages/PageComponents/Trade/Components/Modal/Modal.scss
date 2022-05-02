@@ -1,0 +1,55 @@
+#priceBtn {
+    float: right;
+    margin: 25px;
+    font-size: 20px;
+    padding: 0; 
+}
+
+#priceTxt {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+#percChange {
+    position: absolute;
+    top: 10px;
+    left: 130px;
+}
+
+#Volume {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+}
+
+#breakEven {
+    position: absolute;
+    top: 10px;
+    left: 480px;
+}
+
+#priceValue {
+    position: absolute;
+    top: 35px;
+    left: 15px;
+    display: inline-block;
+}
+
+#percValue {
+    position: absolute;
+    top: 35px;
+    left: 160px;
+}
+
+#volValue {
+    position: absolute;
+    top: 35px;
+    left: 335px;
+}
+
+#breakValue {
+    position: absolute;
+    top: 35px;
+    left: 495px;
+}

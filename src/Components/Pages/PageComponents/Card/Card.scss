@@ -1,0 +1,190 @@
+:root {
+    --widthvar: 380px;
+    --heightvar: 260px;
+    --topvar: 150px;
+
+    --shadow: black;
+    --column1: #aaa;
+    --column2: #bbb;
+}
+
+
+.cardWrapper {
+    overflow: hidden;
+    box-shadow: 0px 0px 25px -5px var(--shadow);
+    position: relative;
+    left: 500px;
+    top: var(--topvar);
+    width:var(--widthvar);
+    text-align: center;
+    border: 3px solid black;
+    &#pos {
+        --column1: #90EE90;
+        --column2: #0BDA51;
+        --shadow: rgb(0, 255, 0);
+    }
+    &#neg {
+    --shadow: red;
+    --column1: #ffcccb;
+    --column2: #F88379;
+    }
+    margin: 2rem;
+    display: table;
+    display: inline-block;
+    animation: reveal 2s;
+}
+
+
+
+.pfp {
+    width: 40px;
+    height:40px;
+    float:left;
+    
+}
+
+
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 8px;
+    color: black;
+  }
+
+.cardWrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.imgWrapper img{
+    overflow: hidden;
+    height: var(--heightvar);
+}
+
+.cardhr {
+    background-color: black;
+    height: 4px;
+    margin: 0px;
+}
+
+
+
+.totalwrapper {
+    text-shadow: 2.5px 2.5px black;
+    color: var(--shadow);
+}
+
+.namewrapper {
+    color: var(--shadow);
+    text-shadow: 2.5px 2.5px black;
+    height: 40px;
+}
+
+.expirywrapper {
+    color: black;
+
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+  }
+
+
+#column1{
+    background:var(--column1)
+}
+
+#column2{
+    background:var(--column2);
+    border-left: 3px solid black;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+
+.card {
+  border-radius: .2rem;
+  min-width: 8rem;
+  }
+
+
+@media screen and (min-width: 600px) {
+  .cardWrapper {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 16rem));
+  }
+
+  @keyframes reveal {
+    from {
+        transform: translate3d(0,-40px,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+    min-width: 10rem;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+
+    &__img {
+      width: 100%;
+      height: 12rem;
+    }
+  }
+
+  .allCards {
+    width: 1500px;
+    animation: reveal 2s;
+
+  }
+}
+
+.trapezoid {
+	border-bottom: 50px solid var(--column2);
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 125px;
+  transform: rotate(180deg) scaleX(-1);
+  text-align: center;
+  left: 38%;
+  position: absolute;
+}
+
+
+.trapText {
+  transform: rotate(180deg) scaleX(-1);
+  top: 5px;
+  left: 10px;
+  position: absolute;
+  margin: 10px;
+}
+
+#typeText {
+  top: -10px;
+  left: 15px;
+}
+
